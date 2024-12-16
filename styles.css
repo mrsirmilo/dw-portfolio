@@ -1,0 +1,74 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    background: linear-gradient(to bottom, #000000, #141414);
+    color: white;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .splash {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .splash-heading {
+    font-size: 6rem;
+    font-weight: bold;
+    background: linear-gradient(90deg, #0184ff, #893ee1);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-transform: uppercase;
+    opacity: 0; /* For animation */
+  }
+  
+  .cta-button {
+    padding: 0.75rem 1.5rem;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: black; /* Default text color */
+    background: white; /* Default white background */
+    border: none;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    transition: transform 0.3s ease, color 0.3s ease;
+  }
+  
+  .cta-button:hover {
+    animation: gradient-fade-in 0.5s forwards;
+    transform: scale(1.1);
+    color: white;
+  }
+  
+  .cta-button:not(:hover) {
+    animation: gradient-fade-out 0.5s forwards;
+    transform: scale(1); /* Reset size */
+    color: black; /* Reset text color */
+  }
+  
+  @keyframes gradient-fade-in {
+    0% {
+      background: white;
+    }
+    100% {
+      background: linear-gradient(90deg, #0184ff, #893ee1);
+    }
+  }
+  
+  @keyframes gradient-fade-out {
+    0% {
+      background: linear-gradient(90deg, #0184ff, #893ee1);
+    }
+    100% {
+      background: white;
+    }
+  }
+  
+  .cta-button:hover {
+    background: darkblue;
+    transform: scale(1.05);
+  }
+  
