@@ -1,0 +1,174 @@
+/* General Styling */
+body, html {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif; /* Friendly font */
+  color: white;
+  background-color: #141414;
+  overflow-x: hidden;
+}
+
+/* Splash Page */
+.splash {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+/* Zoom-Out Animation for Name */
+.splash-heading {
+  font-size: 6rem;
+  font-weight: bold;
+  background: linear-gradient(90deg, #0184ff, #893ee1);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  opacity: 0;  /* Initially invisible */
+  transform: scale(1.5);  /* Start larger */
+  animation: zoomOut 1s ease-out forwards;  /* Animation applied here */
+}
+
+/* Zoom-Out Keyframes */
+@keyframes zoomOut {
+  to {
+    opacity: 1;  /* Fade in */
+    transform: scale(1);  /* Zoom out to normal size */
+  }
+}
+
+.cta-button {
+  margin-top: 1rem;
+  padding: 0.75rem 1.5rem;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: black;
+  background: white;
+  border: none;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.cta-button:hover {
+  background: linear-gradient(90deg, #0184ff, #893ee1);
+  color: white;
+  transform: scale(1.05);
+}
+
+/* Section Styles */
+.section {
+  padding: 3rem;
+  text-align: center;
+}
+
+.section h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  background: linear-gradient(90deg, #0184ff, #893ee1);
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-transform: uppercase;
+}
+
+.section p {
+  max-width: 800px;
+  margin: 0 auto;
+  font-size: 1.2rem;
+  color: #ccc;
+  line-height: 1.6;
+}
+
+/* Tiles */
+.tiles {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.tile {
+  background: linear-gradient(135deg, #1f1f1f, #292929);
+  width: 300px;
+  padding: 2rem;
+  text-align: center;
+  border-radius: 12px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.5);
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+  cursor: pointer;
+}
+
+.tile:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.6);
+  background: linear-gradient(135deg, #0184ff, #893ee1);
+}
+
+.tile i {
+  font-size: 3rem;  /* Increase size for better visibility */
+  margin-bottom: 1rem;
+  color: #00aaff;
+  transition: transform 0.3s ease, color 0.3s ease;
+  display: inline-block;
+}
+
+.tile:hover i {
+  transform: rotate(15deg);
+  color: #ffffff;
+}
+
+.tile h3 {
+  margin: 0.5rem 0;
+  color: #ffffff;
+}
+
+.tile p {
+  margin: 0.5rem 0;
+  color: #ccc;
+}
+
+.tile .btn-overlay {
+  background: linear-gradient(90deg, #0184ff, #893ee1);
+  padding: 0.75rem 1.5rem;
+  color: #ffffff;
+  font-weight: bold;
+  border-radius: 8px;
+  text-decoration: none;
+  display: inline-block;
+  margin-top: 1rem;
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.tile:hover .btn-overlay {
+  background: linear-gradient(135deg, #1f1f1f, #292929);
+  padding: 0.75rem 1.5rem;
+  color: #ffffff;
+  font-weight: bold;
+  border-radius: 8px;
+  text-decoration: none;
+  display: inline-block;
+  margin-top: 1rem;
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.tile .btn-overlay:hover {
+  background: white;
+  color: #1f1f1f;
+  transform: scale(1.05);
+}
+
+/* Footer */
+.footer {
+  text-align: center;
+  padding: 1rem;
+  background: #111;
+  color: #ccc;
+}
